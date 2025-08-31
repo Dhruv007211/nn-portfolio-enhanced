@@ -7,8 +7,9 @@ export default function Contact() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [errors, setErrors] = useState({})
+  const [status, setStatus] = useState('') // success/error message
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     let tempErrors = {}
     if (!name.trim()) tempErrors.name = 'Name is required'
@@ -16,11 +17,27 @@ export default function Contact() {
     setErrors(tempErrors)
 
     if (Object.keys(tempErrors).length === 0) {
-      // Form is valid, you can handle send here
-      alert('Message sent successfully!')
-      setName('')
-      setEmail('')
-      setMessage('')
+      // send form data to Formspree
+      try {
+        const response = await fetch("https://formspree.io/f/xeolkkyw", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, message }),
+        })
+
+        if (response.ok) {
+          setStatus("✅ Message sent successfully!")
+          setName("")
+          setEmail("")
+          setMessage("")
+        } else {
+          setStatus("❌ Something went wrong, please try again.")
+        }
+      } catch (error) {
+        setStatus("⚠️ Error connecting to server.")
+      }
     }
   }
 
@@ -48,8 +65,8 @@ export default function Contact() {
           <p className='mt-1 text-gray-300'><FaPhone className='inline mr-2 text-purple-400' /> +91 9021889562</p>
           <div className='flex gap-4 mt-4 text-2xl text-neon'>
             <a href='https://github.com/Dhruv007211' target='_blank' rel='noreferrer'><FaGithub /></a>
-            <a href='https://www.linkedin.com/in/dhruv-singh-88969a333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' target='_blank' rel='noreferrer'><FaLinkedin /></a>
-            <a href='https://www.instagram.com/dhruvionx?igsh=MjVhZDJlbTNnejZw' target='_blank' rel='noreferrer'><FaInstagram /></a>
+            <a href='https://www.linkedin.com/in/dhruv-singh-88969a333' target='_blank' rel='noreferrer'><FaLinkedin /></a>
+            <a href='https://www.instagram.com/dhruvionx' target='_blank' rel='noreferrer'><FaInstagram /></a>
           </div>
         </motion.div>
 
@@ -70,6 +87,7 @@ export default function Contact() {
           {errors.name && <div className='text-red-500 text-sm'>{errors.name}</div>}
 
           <input 
+            type="email"
             className='w-full p-3 rounded bg-transparent border border-white/10 text-gray-100 placeholder-gray-400' 
             placeholder='Email' 
             value={email} 
@@ -84,7 +102,10 @@ export default function Contact() {
             value={message} 
             onChange={(e)=>setMessage(e.target.value)}
           />
+
           <button type='submit' className='px-4 py-2 rounded bg-neon text-black font-semibold hover:scale-105 transition-transform duration-300'>Send</button>
+
+          {status && <p className="mt-2 text-sm text-green-400">{status}</p>}
         </motion.form>
       </div>
     </section>
