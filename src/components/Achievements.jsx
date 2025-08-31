@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const achievements = [
-  { title: 'DSA Proficiency (Java)', detail: 'Strong problem solving & OOP, solved 40+ problems on LeetCode & 10+ problems GeeksforGeeks' },
+  { title: 'DSA Proficiency (Java)', detail: 'Strong problem solving & OOP, solved 40+ problems on LeetCode & 10+ problems on GeeksforGeeks' },
   { title: 'Multiple DS Projects', detail: 'Handled and preprocessed datasets: cleaned, transformed, and managed data effectively'  },
   { title: 'Data Visualization', detail: 'Built dashboards & visual reports' },
   { title: 'Competition Participation', detail: 'Participated in Anand ICE Ideathon' },
