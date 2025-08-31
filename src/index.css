@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg: #0f172a; --card: #0b1220; }
+
+html,body,#root { height:100%; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, #071028 0%, #0b1220 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Glowing underline for headings */
+.glow-underline {
+  position: relative;
+}
+.glow-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 6px;
+  width: 60%;
+  background: linear-gradient(90deg, rgba(124,58,237,0.9), rgba(6,182,212,0.9));
+  filter: blur(8px);
+  opacity: 0.8;
+  border-radius: 8px;
+}
+
+/* subtle floating animation */
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
