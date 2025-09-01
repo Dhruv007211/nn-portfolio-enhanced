@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume - Dhruv Singh</title>
+<style>
+  /* Reset */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .resume-container {
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height */
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Download button */
+  #download-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #0077b5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #download-btn:hover { background: #005a86; }
+
+  /* Header */
+  .resume-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .resume-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  .resume-header p {
+    font-weight: bold;
+  }
+
+  .resume-header .contact a {
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 4px;
+  }
+
+  .resume-header .contact a:hover {
+    text-decoration: underline;
+  }
+
+  h2 { font-size: 20px; margin-top: 20px; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+  h3 { font-size: 16px; color: #0077b5; margin-top: 12px; }
+  p, li { font-size: 14px; color: #444; line-height: 1.5; }
+  ul { padding-left: 20px; margin: 5px 0 15px; }
+  li { margin-bottom: 6px; }
+
+  /* Mobile responsiveness */
+  @media screen and (max-width: 768px) {
+    .resume-container {
+      width: 95%;
+      height: auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
+    h3, li, p { font-size: 14px; }
+  }
+
+  /* Print-friendly */
+  @media print {
+    #download-btn { display: none; }
+    body { background: none; display: block; padding: 0; }
+    .resume-container { box-shadow: none; border-radius: 0; width: 100%; min-height: auto; }
+  }
+</style>
+</head>
+<body>
+  <div class="resume-container" id="resume-content">
+    <button id="download-btn">Download PDF</button>
+
+    <!-- Header -->
+    <div class="resume-header">
+      <h1>Dhruv Kumar Singh</h1>
+      <p>Data Science & AI Enthusiast</p>
+      <div class="contact">
+        📧 <a href="mailto:dhruv25072006@gmail.com">dhruv25072006@gmail.com</a> | 
+        📱 9021889562 |
+        🌐 <a href="https://github.com/Dhruv007211" target="_blank">GitHub</a> | 
+        💼 <a href="https://www.linkedin.com/in/dhruv-singh-88969a333" target="_blank">LinkedIn</a> | 
+        🟢 <a href="https://www.geeksforgeeks.org/user/dhruv252o9e/" target="_blank">GFG</a> | 
+        🔵 <a href="https://leetcode.com/Dhruvionx/" target="_blank">LeetCode</a>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <h2>Projects</h2>
+    <h3>Apple Inc. 10-Year Sales Trend Analysis</h3>
+    <ul>
+      <li>Analyzed 10 years of Apple’s sales data to find key market trends.</li>
+      <li>Used Pandas, NumPy, Matplotlib, and Seaborn for visualization.</li>
+      <li>Built clear dashboards showing regional and yearly performance.</li>
+      <li>Provided insights into consumer behavior and product variations.</li>
+    </ul>
+
+    <h3>Retail Sales Data Cleaning and Visualization</h3>
+    <ul>
+      <li>Cleaned raw datasets using Python (NumPy, Pandas).</li>
+      <li>Visualized purchase trends and customer behavior patterns.</li>
+      <li>Designed interactive charts with Matplotlib & Seaborn.</li>
+    </ul>
+
+    <!-- Skills -->
+    <h2>Technical Skills</h2>
+    <h3>Programming Languages</h3>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>C</li>
+    </ul>
+
+    <h3>Core Computer Science</h3>
+    <ul>
+      <li>Data Structures & Algorithms (DSA)</li>
+      <li>Object-Oriented Programming (OOP)</li>
+      <li>Problem Solving Skills</li>
+    </ul>
+
+    <h3>Libraries & Frameworks (Python)</h3>
+    <ul>
+      <li>NumPy</li>
+      <li>Pandas</li>
+      <li>Matplotlib</li>
+      <li>Seaborn</li>
+    </ul>
+
+    <h3>Data Handling & Analysis</h3>
+    <ul>
+      <li>Data Manipulation</li>
+      <li>Data Visualization</li>
+      <li>Data Analysis</li>
+    </ul>
+
+    <h3>Tools</h3>
+    <ul>
+      <li>MS Excel</li>
+    </ul>
+
+    <!-- Achievements -->
+    <h2>Achievements</h2>
+    <h3>Problem Solving & DSA</h3>
+    <ul>
+      <li>Solved 40+ problems on <a href="https://leetcode.com/Dhruvionx/">LeetCode</a></li>
+      <li>Solved 10+ problems on <a href="https://www.geeksforgeeks.org/user/dhruv252o9e/">GeeksforGeeks</a></li>
+    </ul>
+
+    <!-- Participation -->
+    <h2>Participation</h2>
+    <ul>
+      <li>Participated in Ideathon organized by college.</li>
+    </ul>
+
+    <!-- Education -->
+    <h2>Education</h2>
+    <ul>
+      <li><b>Anand International College of Engineering</b> (2024–2028)<br>B.Tech – Computer Science Engineering</li>
+      <li><b>Vidhya Sagar Academy</b> – Class XII, 94%</li>
+    </ul>
+  </div>
+
+  <!-- html2pdf.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById("download-btn").addEventListener("click", () => {
+      const element = document.getElementById("resume-content");
+      html2pdf()
+        .set({ margin: 10, filename: 'Dhruv_Singh_Resume.pdf', html2canvas: { scale: 2 } })
+        .from(element)
+        .save();
+    });
+  </script>
+</body>
+</html>
