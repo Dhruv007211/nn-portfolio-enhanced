@@ -6,7 +6,7 @@ const programming = ['Python', 'Java', 'C']
 const coreCS = ['Data Structures & Algorithms (DSA)', 'Object Oriented Programming (OOP)', 'Problem Solving']
 const libraries = ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn']
 const dataHandling = ['Data Manipulation', 'Data Visualization', 'Data Analysis']
-const tools = ['MS Excel']
+const tools = ['MS Excel','VS-Code','Jupyter NoteBook']
 
 export default function Skills() {
   const renderList = (arr) =>

@@ -4,13 +4,31 @@ import { motion } from 'framer-motion'
 const projects = [
   { 
     title: 'Apple Inc. 10-Year Sales Trend Analysis', 
-    desc: 'Analyzed 10 years of Apple sales data to identify trends, visualize growth, and forecast future sales.', 
-    tech: ['Python','Pandas','NumPy','Matplotlib'] 
+    desc: 'Analyzed 10 years of Apple sales data to identify key trends, visualize growth, and forecast future sales.', 
+    tech: ['Python','Pandas','NumPy','Matplotlib','Seaborn'],
+    tools: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+    link: null
   },
   { 
     title: 'Retail Sales Data Cleaning and Visualization', 
     desc: 'Performed data cleaning, preprocessing, and visualized retail sales data for actionable insights.', 
-    tech: ['Python','NumPy','Pandas','Seaborn','Matplotlib'] 
+    tech: ['Python','NumPy','Pandas','Seaborn','Matplotlib'],
+    tools: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+    link: null
+  },
+  { 
+    title: 'Mini Data Analyst – Automated Data Manipulation & Analysis', 
+    desc: 'Automatically cleans, manipulates, and analyzes datasets, generating instant insights and visual reports.', 
+    tech: ['Python','Pandas','NumPy','Matplotlib','Seaborn'],
+    tools: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Streamlit/Flask', 'MS Excel', 'VS Code', 'Jupyter Notebook'],
+    link: 'https://mini-data-analyst-1.onrender.com'
+  },
+  { 
+    title: 'Zomato Data Analysis & Visualization', 
+    desc: 'Analyzed Zomato restaurant dataset to understand user preferences, trends, and visualized cuisine & ratings.', 
+    tech: ['Python','Pandas','Matplotlib','Seaborn'],
+    tools: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'MS Excel', 'VS Code', 'Jupyter Notebook'],
+    link: null
   },
 ]
 
@@ -36,7 +54,22 @@ export default function Projects(){
           >
             <div className='font-bold text-gray-100'>{p.title}</div>
             <div className='text-sm text-gray-300 mt-2'>{p.desc}</div>
-            <div className='text-xs opacity-80 mt-3'>{p.tech.join(' • ')}</div>
+            <div className='text-xs opacity-80 mt-3'>
+              <b>Tech:</b> {p.tech.join(' • ')}
+            </div>
+            <div className='text-xs opacity-80 mt-1'>
+              <b>Tools:</b> {p.tools.join(' • ')}
+            </div>
+            {p.link && (
+              <a 
+                href={p.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-400 text-sm mt-2 inline-block hover:underline"
+              >
+                Live Project
+              </a>
+            )}
           </motion.article>
         ))}
       </div>
